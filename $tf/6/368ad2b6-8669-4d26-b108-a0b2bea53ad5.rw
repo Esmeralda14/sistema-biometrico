@@ -1,1 +1,0 @@
-ALTER TABLE `tb_inventario` ADD `stockCritico` INT NOT NULL DEFAULT '0' ;
