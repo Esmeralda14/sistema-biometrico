@@ -52,7 +52,9 @@ import org.xml.sax.Attributes;
 public class AltaDeEmpleado extends javax.swing.JInternalFrame {
     File file, copia;
     public AltaDeEmpleado() {
+        
         initComponents();
+       
         //this.setLocationRelativeTo(null);
         
 //        addWindowListener(new java.awt.event.WindowAdapter() {
@@ -78,7 +80,6 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         txtApellidos = new javax.swing.JTextField();
@@ -100,13 +101,16 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         txtHoraEntrada = new javax.swing.JFormattedTextField();
         txtHoraSalida = new javax.swing.JFormattedTextField();
+        jLabel15 = new javax.swing.JLabel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
 
-        setBackground(new java.awt.Color(0, 0, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(null);
         setClosable(true);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setForeground(new java.awt.Color(0, 0, 255));
         setTitle("Alta de empleado");
+        setMinimumSize(new java.awt.Dimension(757, 446));
+        setName(""); // NOI18N
+        setPreferredSize(new java.awt.Dimension(1060, 580));
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
             }
@@ -126,16 +130,30 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
             }
         });
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("DATOS DEL EMPLEADO"));
+        jPanel2.setBackground(new java.awt.Color(74, 129, 163));
+        jPanel2.setAlignmentX(10.0F);
+        jPanel2.setAlignmentY(10.0F);
         jPanel2.setAutoscrolls(true);
+        jPanel2.setMinimumSize(new java.awt.Dimension(1030, 580));
+        jPanel2.setName(""); // NOI18N
+        jPanel2.setPreferredSize(new java.awt.Dimension(1030, 580));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel14.setText("Nombre(s):");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
-        jPanel2.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 570, -1));
-        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 570, -1));
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Fotografia");
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, -1, -1));
+
+        txtApellidos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 570, 30));
+
+        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 570, 30));
 
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -143,45 +161,54 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 560, 40));
+        jPanel2.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 560, 40));
 
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Apellidos:");
         jLabel17.setAlignmentY(1.0F);
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblImagenHuella.setBackground(new java.awt.Color(255, 51, 51));
+        lblImagenHuella.setBackground(new java.awt.Color(255, 255, 255));
         lblImagenHuella.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/hueya.png"))); // NOI18N
-        jPanel3.add(lblImagenHuella, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 170));
+        jPanel3.add(lblImagenHuella, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 180));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 190, 190));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 200, 200));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
         txtArea.setEditable(false);
         txtArea.setColumns(20);
+        txtArea.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         txtArea.setRows(5);
         jScrollPane1.setViewportView(txtArea);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 570, 100));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 570, 100));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Puesto:");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
+        cboxPuesto.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cboxPuesto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboxPuestoActionPerformed(evt);
             }
         });
-        jPanel2.add(cboxPuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 370, -1));
+        jPanel2.add(cboxPuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 192, 370, 30));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Grupo al que pertenece");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
-        jPanel2.add(cboxGrupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 370, -1));
+        cboxGrupo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(cboxGrupo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 370, 30));
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -189,7 +216,7 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/hueya.png"))); // NOI18N
         jScrollPane2.setViewportView(jLabel3);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, 400, 340));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 50, 400, 340));
 
         btnExaminar.setText("Examinar");
         btnExaminar.addActionListener(new java.awt.event.ActionListener() {
@@ -197,40 +224,69 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
                 btnExaminarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnExaminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, 400, -1));
+        jPanel2.add(btnExaminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, 400, 40));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Hora de entrada:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Hora de salida:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, -1, -1));
 
         try {
             txtHoraEntrada.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
         } catch (java.text.ParseException ex) {
+            txtHoraEntrada.setText("  :  ");
             ex.printStackTrace();
         }
-        jPanel2.add(txtHoraEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 110, -1));
+        txtHoraEntrada.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtHoraEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 110, 30));
 
         try {
             txtHoraSalida.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jPanel2.add(txtHoraSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 120, -1));
+        txtHoraSalida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jPanel2.add(txtHoraSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 120, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1040, 510));
-        jPanel1.add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, -1, -1));
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Nombre(s):");
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 1060, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 580, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -292,6 +348,10 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
         //btnSalir.grabFocus();
     }//GEN-LAST:event_formInternalFrameOpened
 
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -334,13 +394,13 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> cboxPuesto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
@@ -564,37 +624,6 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
         EmpleadoBean empleado= null;
         try{
             con= Conexion.getConexion();
-            //stmt= con.prepareStatement("select clave, hueya, hueya1 from empleado where clave= ?");
-            //stmt.setInt(1, Integer.parseInt(txtClave.getText()));
-            //rs = stmt.executeQuery();
-        //        if(rs.next()){
-        //           //Lee la plantilla de la base de datos
-        //            byte templateBuffer[] = rs.getBytes(2);
-        //            //Crea una nueva plantilla a partir de la guardada en la base de datos
-        //            DPFPTemplate referenceTemplate = DPFPGlobal.getTemplateFactory().createTemplate(templateBuffer);
-        //            //Envia la plantilla creada al objeto contendor de Template del componente de huella digital
-        //            setTemplate(referenceTemplate);
-        //              //Compara las caracteriticas de la huella recientemente capturda con la
-        //            // plantilla guardada al usuario especifico en la base de datos
-        //            DPFPVerificationResult result = Verificador.verify(featuresverificacion, getTemplate());
-        //
-        //            //compara las plantilas (actual vs bd)
-        //if (result.isVerified()){
-        //JOptionPane.showMessageDialog(null, "La huella ya existe, coloque un dedo diferente");
-        //}
-        //else{
-        //PreparedStatement guardarStmt2 = con.prepareStatement("update empleado set hueya1=? where (clave=?)");
-        //guardarStmt2.setBinaryStream(1, datosHuella,tamañoHuella);
-        //guardarStmt2.setInt(2,Integer.parseInt(txtClave.getText()));
-        //
-        ////Ejecuta la sentencia
-        //guardarStmt2.execute();
-        //guardarStmt2.close();
-        //JOptionPane.showMessageDialog(null,"Huella Guardada Correctament");
-        //}
-        //}
-    //    else if(!rs.next()){
-        //String nombre = JOptionPane.showInputDialog("Nombre y Apellidos:");
         try{   
             PreparedStatement guardarStmt = con.prepareStatement("INSERT INTO tb_empleados (nombres, apellidos, idPuesto,idGrupo, huella,foto,horaEntrada,horaSalida) "
             + "values(?,?,(select id from tb_puestos where puesto = ?),(select id from tb_grupos where grupo = ?),?,?,?,?)");
@@ -609,6 +638,7 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
             guardarStmt.setString(8,txtHoraSalida.getText());
             //Ejecuta la sentencia
             guardarStmt.executeUpdate();
+            System.out.println(guardarStmt);
             guardarStmt.close();
             JOptionPane.showMessageDialog(null,"Datos guardados correctamente");
 
@@ -616,8 +646,12 @@ public class AltaDeEmpleado extends javax.swing.JInternalFrame {
             //stop();
             txtArea.setText(null);
             this.jLabel3.setIcon(null);
+            this.cboxGrupo.setSelectedIndex(0);
+            this.cboxPuesto.setSelectedIndex(0);
             txtNombre.setText(null);
             txtApellidos.setText(null);
+            txtHoraEntrada.setText(null);
+            txtHoraSalida.setText(null);
         }catch(Exception ex){
             //JOptionPane.showMessageDialog(null,ex.getMessage());   
             JOptionPane.showMessageDialog(null,"Debe completar todos los campos");

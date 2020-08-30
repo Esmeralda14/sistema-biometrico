@@ -111,6 +111,8 @@ public class ListaEmpleados extends javax.swing.JInternalFrame {
 
         jPanel1.setMinimumSize(new java.awt.Dimension(200, 1000));
 
+        txtApellido.setEditable(false);
+
         jLabel7.setText("Hora de salida");
 
         jLabel2.setText("Nombre(s)");
@@ -126,6 +128,7 @@ public class ListaEmpleados extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Apellidos");
 
+        txtHoraSalida.setEditable(false);
         try {
             txtHoraSalida.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
         } catch (java.text.ParseException ex) {
@@ -134,11 +137,14 @@ public class ListaEmpleados extends javax.swing.JInternalFrame {
 
         jLabel6.setText("Hora de entrada");
 
+        txtHoraEntrada.setEditable(false);
         try {
             txtHoraEntrada.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+
+        txtNombre.setEditable(false);
 
         btnModificar.setText("Modificar");
         btnModificar.setEnabled(false);
@@ -177,7 +183,7 @@ public class ListaEmpleados extends javax.swing.JInternalFrame {
                                 .addGap(55, 55, 55))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -263,6 +269,7 @@ public class ListaEmpleados extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        tbEmpleados.setColumnSelectionAllowed(false);
         tbEmpleados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tbEmpleadosMouseClicked(evt);
@@ -283,10 +290,10 @@ public class ListaEmpleados extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, Short.MAX_VALUE))
         );
 
         pack();

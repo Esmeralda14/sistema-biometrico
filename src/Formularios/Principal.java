@@ -235,21 +235,6 @@ public class Principal extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void lbIdRolPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_lbIdRolPropertyChange
-        try{
-            int rol = Integer.parseInt(lbIdRol.getText());
-            if(rol == 2){
-                miUsuarios.setVisible(false);
-                btnNewEmpleado.setVisible(false);
-            }
-        }
-        catch(Exception ex){
-            // nada por aqui
-        }
-        
-        
-    }//GEN-LAST:event_lbIdRolPropertyChange
-
     private void miUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miUsuariosActionPerformed
         ListaUsuarios lu = new ListaUsuarios();
         principal.add(lu);
@@ -268,6 +253,20 @@ public class Principal extends javax.swing.JFrame {
         }
         vReporte.show();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void lbIdRolPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_lbIdRolPropertyChange
+        try{
+            int rol = Integer.parseInt(lbIdRol.getText());
+            if(rol == 2){
+                miUsuarios.setVisible(false);
+                btnNewEmpleado.setVisible(false);
+            }
+        }
+        catch(Exception ex){
+            // nada por aqui
+        }
+
+    }//GEN-LAST:event_lbIdRolPropertyChange
 
     /**
      * @param args the command line arguments
@@ -316,7 +315,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    public static javax.swing.JLabel lbIdRol;
+    public javax.swing.JLabel lbIdRol;
     private javax.swing.JMenuItem miGrupos;
     private javax.swing.JMenuItem miPuestos;
     private javax.swing.JMenuItem miUsuarios;
